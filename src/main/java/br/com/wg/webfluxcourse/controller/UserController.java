@@ -1,4 +1,4 @@
-package br.com.wg.webfluxcourse.controllers;
+package br.com.wg.webfluxcourse.controller;
 
 import br.com.wg.webfluxcourse.model.request.UserRequest;
 import br.com.wg.webfluxcourse.model.response.UserResponse;
