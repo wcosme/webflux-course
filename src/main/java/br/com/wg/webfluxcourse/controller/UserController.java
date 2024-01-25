@@ -15,7 +15,6 @@ public interface UserController {
     @GetMapping(value = "/{id}")
     ResponseEntity<Mono<UserResponse>> find(@PathVariable String id);
 
-
     @GetMapping
     ResponseEntity<Flux<UserResponse>> findAll();
 
@@ -24,6 +23,5 @@ public interface UserController {
 
     @DeleteMapping(value = "/{id}")
     ResponseEntity<Mono<Void>> delete(@PathVariable String id);
-
 
 }
