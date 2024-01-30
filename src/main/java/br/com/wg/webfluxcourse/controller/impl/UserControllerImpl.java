@@ -2,6 +2,7 @@ package br.com.wg.webfluxcourse.controller.impl;
 
 import br.com.wg.webfluxcourse.controller.UserController;
 import br.com.wg.webfluxcourse.controller.service.UserService;
+import br.com.wg.webfluxcourse.mapper.UserMapper;
 import br.com.wg.webfluxcourse.model.request.UserRequest;
 import br.com.wg.webfluxcourse.model.response.UserResponse;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +19,7 @@ import reactor.core.publisher.Mono;
 public class UserControllerImpl implements UserController {
 
     private final UserService service;
+    private final UserMapper mapper;
 
     @Override
     public ResponseEntity<Mono<Void>> save(final UserRequest request) {
@@ -25,8 +27,8 @@ public class UserControllerImpl implements UserController {
     }
 
     @Override
-    public ResponseEntity<Mono<UserResponse>> find(String id) {
-        return null;
+    public ResponseEntity<Mono<UserResponse>> findById(String id) {
+        return ResponseEntity.status(HttpStatus.OK).body(service.findById(id).map(mapper::entityToResponse));
     }
 
     @Override
