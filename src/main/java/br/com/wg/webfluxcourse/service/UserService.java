@@ -1,4 +1,4 @@
-package br.com.wg.webfluxcourse.controller.service;
+package br.com.wg.webfluxcourse.service;
 
 import br.com.wg.webfluxcourse.entity.User;
 import br.com.wg.webfluxcourse.mapper.UserMapper;

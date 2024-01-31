@@ -1,7 +1,7 @@
 package br.com.wg.webfluxcourse.controller.impl;
 
 import br.com.wg.webfluxcourse.controller.UserController;
-import br.com.wg.webfluxcourse.controller.service.UserService;
+import br.com.wg.webfluxcourse.service.UserService;
 import br.com.wg.webfluxcourse.mapper.UserMapper;
 import br.com.wg.webfluxcourse.model.request.UserRequest;
 import br.com.wg.webfluxcourse.model.response.UserResponse;

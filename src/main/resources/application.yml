@@ -6,3 +6,7 @@ spring:
     mongodb:
       uri: mongodb+srv://${DB_USER:root}:${DB_PASSWORD}@webfluxcoursecluster.necnktk.mongodb.net/${DB_NAME:webflux-course}?retryWrites=true&w=majority
       auto-index-creation: true
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
+
+
